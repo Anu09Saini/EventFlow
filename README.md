@@ -3,7 +3,6 @@
 EventFlow is a JavaScript-based event task management application that helps users organize and track tasks for an event using an interactive Kanban board.
 
 Users can create an event, add and manage tasks, move tasks between different workflow stages using drag-and-drop, search and filter tasks, sort them, and persist application data using browser `localStorage`.
----
 
 
 ## Technologies Used
@@ -33,7 +32,8 @@ EventFlow/
 │   └── style.css
 │
 ├── js/
-│   └── script.js
+│   ├── script.js
+│   └── tasks.js
 │
 └── README.md
 ```
@@ -313,6 +313,8 @@ Possible future enhancements include:
 
 ---
 ## Loom Video :
+
+Link :   https://www.loom.com/share/ddbb2d70ca6646e2be347a400489f751
 
 ---
 
