@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EventFlow - Add Task</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <h1>EventFlow</h1>
+    <p>Add a task to your event</p>
+  </header>
+
+  <main class="container">
+
+    <section class="event-form-section">
+      <h2>Add New Task</h2>
+      <p id="taskEventName"></p>
+
+      <form id="taskForm">
+
+        <!-- Task Name -->
+        <div class="form-group">
+          <label for="taskName"> Task Name </label>
+          <input type="text" id="taskName" name="taskName" placeholder="Enter task name">
+        </div>
+
+        <!-- Category -->
+        <div class="form-group">
+          <label for="taskCategory"> Category </label>
+          <select id="taskCategory" name="taskCategory">
+
+            <option value=""> Select category </option>
+            <option value="venue"> Venue </option>
+            <option value="food"> Food & Catering </option>
+            <option value="decoration"> Decoration </option>
+            <option value="invitation"> Invitations </option>
+            <option value="photography"> Photography </option>
+            <option value="entertainment"> Entertainment </option>
+            <option value="shopping"> Shopping </option>
+            <option value="guest"> Guest Management </option>
+            <option value="other"> Other </option>
+          </select>
+        </div>
+
+        <!-- Due Date -->
+        <div class="form-group">
+          <label for="taskDueDate"> Due Date </label>
+          <input type="date" id="taskDueDate" name="taskDueDate">
+        </div>
+
+        <!-- Priority -->
+        <div class="form-group">
+
+          <label for="taskPriority"> Priority </label>
+          <select id="taskPriority" name="taskPriority">
+            <option value=""> Select priority </option>
+            <option value="high"> High </option>
+            <option value="medium"> Medium </option>
+            <option value="low"> Low </option>
+          </select>
+        </div>
+
+        <!-- Description -->
+        <div class="form-group">
+          <label for="taskDescription"> Description </label>
+          <textarea id="taskDescription" name="taskDescription" placeholder="Enter task description"
+            rows="4"></textarea>
+        </div>
+
+        <!-- Error -->
+        <p id="taskError" class="error-message"></p>
+
+        <!-- Submit -->
+        <button type="submit" class="primary-button" id="taskSubmitButton"> Add Task </button>
+
+      </form>
+    </section>
+  </main>
+
+  <script src="../js/script.js"></script>
+
+</body>
+
+</html>

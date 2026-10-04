@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>EventFlow - Tasks</title>
+
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <h1>EventFlow</h1>
+    <p>Manage your event tasks</p>
+  </header>
+
+  <main class="tasks-container">
+
+    <!-- Event Information -->
+    <section class="tasks-header">
+      <div>
+        <h2 id="tasksEventName"> Event Name </h2>
+        <p id="tasksEventDetails"> Event details </p>
+      </div>
+      <button id="addNewTaskButton" class="primary-button"> + Add New Task </button>
+    </section>
+
+    <!-- Search and Sort -->
+    <section class="task-controls">
+      <div class="search-box">
+        <label for="searchTasks"> Search Tasks </label>
+        <input type="text" id="searchTasks" placeholder="Search by task name...">
+      </div>
+
+      <div class="filter-box">
+        <label for="sortTasks"> Sort By </label>
+        <select id="sortTasks">
+          <option value="dueDate"> Due Date </option>
+          <option value="priority"> Priority </option>
+          <option value="name"> Task Name </option>
+        </select>
+      </div>
+
+      <div class="filter-box">
+        <label for="filterCategory"> Category </label>
+        <select id="filterCategory">
+          <option value="all"> All Categories </option>
+          <option value="venue"> Venue </option>
+          <option value="food"> Food & Catering </option>
+          <option value="decoration"> Decoration </option>
+          <option value="invitation"> Invitations </option>
+          <option value="photography"> Photography </option>
+          <option value="entertainment"> Entertainment </option>
+          <option value="shopping"> Shopping </option>
+          <option value="guest"> Guest Management </option>
+          <option value="other"> Other </option>
+        </select>
+      </div>
+
+      <button id="resetFiltersButton" class="secondary-button"> Reset Filters
+      </button>
+      <button id="clearCompletedButton" class="secondary-button"> Clear Completed
+      </button>
+    </section>
+
+    <!-- Kanban Board -->
+    <section class="kanban-board">
+
+      <!-- Planned -->
+      <div class="kanban-column" data-status="planned">
+        <div class="kanban-column-header">
+          <h3>Planned</h3>
+          <span id="plannedCount"> 0 </span>
+        </div>
+        <div id="plannedTasks" class="task-list"> </div>
+      </div>
+
+      <!-- In Progress -->
+      <div class="kanban-column" data-status="in-progress">
+        <div class="kanban-column-header">
+          <h3>In Progress</h3>
+          <span id="inProgressCount"> 0 </span>
+        </div>
+        <div id="inProgressTasks" class="task-list"> </div>
+      </div>
+
+      <!-- Completed -->
+      <div class="kanban-column" data-status="completed">
+        <div class="kanban-column-header">
+          <h3>Completed</h3>
+          <span id="completedCount"> 0 </span>
+        </div>
+        <div id="completedTasks" class="task-list"> </div>
+      </div>
+    </section>
+  </main>
+
+
+  <script src="../js/script.js"></script>
+
+</body>
+
+</html>
